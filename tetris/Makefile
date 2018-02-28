@@ -1,9 +1,9 @@
-CPPFLAGS=-Wall -g
+CPPFLAGS=-Wall -g 
 OBJECTS=tetris.o painter.o tetromino.o well.o game.o
 %.o: %.cpp
 	g++ -c $(CPPFLAGS) -o $@ $<
 tetris: $(OBJECTS)
-	g++ $(OBJECTS) -o tetris -g -lglut
+	g++ $(OBJECTS) -o tetris -lGL -lGLU  -lglut
 tetris.o: tetris.cpp game.hpp well.hpp tetromino.hpp painter.hpp
 painter.o: painter.cpp painter.hpp
 tetromino.o: tetromino.cpp tetromino.hpp painter.hpp

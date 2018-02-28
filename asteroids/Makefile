@@ -4,7 +4,7 @@ TARGET=asteroids
 %.o: %.cpp
 	g++ -c $(CPPFLAGS) -o $@ $<
 $(TARGET): $(OBJECTS)
-	g++ $(OBJECTS) -o $(TARGET) -g -lglut
+	g++ $(OBJECTS) -o $(TARGET) -g -lGL -lGLU  -lglut
 main.o: main.cpp painter.hpp keys.hpp bullet.hpp asteroid.hpp game.hpp
 painter.o: painter.cpp painter.hpp jet.hpp
 ship.o: ship.cpp ship.hpp keys.hpp vector.hpp jet.hpp game.hpp painter.hpp game.hpp

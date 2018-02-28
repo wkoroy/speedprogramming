@@ -4,7 +4,7 @@ TARGET=snake
 %.o: %.cpp
 	g++ -c $(CPPFLAGS) -o $@ $<
 $(TARGET): $(OBJECTS)
-	g++ $(OBJECTS) -o $(TARGET) -g -lglut
+	g++ $(OBJECTS) -o $(TARGET) -g -lGL -lGLU  -lglut
 main.o: main.cpp painter.hpp field.hpp
 painter.o: painter.cpp painter.hpp
 field.o: field.cpp field.hpp painter.hpp

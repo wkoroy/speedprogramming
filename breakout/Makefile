@@ -5,7 +5,7 @@ TARGET=breakout
 %.o: %.cpp
 	g++ -c $(CPPFLAGS) -o $@ $<
 $(TARGET): $(OBJECTS)
-	g++ $(OBJECTS) -o $(TARGET) -g -lglut
+	g++ $(OBJECTS) -o $(TARGET) -g -lGL -lGLU  -lglut
 breakout.o: breakout.cpp painter.hpp wall.hpp \
 brick.hpp ball.hpp wall.hpp
 painter.o: painter.cpp painter.hpp
